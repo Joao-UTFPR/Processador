@@ -44,4 +44,3 @@ begin
         wait;
     end process;
 end architecture a_ula_tb;
-
