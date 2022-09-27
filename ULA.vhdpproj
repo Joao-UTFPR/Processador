@@ -1,0 +1,7 @@
+﻿<Project>
+  <ItemGroup>
+    <File Include="ula.vhd" />
+    <File Include="ula_tb.vhd" />
+  </ItemGroup>
+  <PropertyGroup />
+</Project>
