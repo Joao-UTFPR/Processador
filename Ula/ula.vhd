@@ -24,7 +24,7 @@ begin
             when "001" => -- Subtração
                 saida <= A - B;
             when "010" => -- Shift Left
-                saida <= A sll 1;
+                saida <= A sll B;
             when "011" => -- And
                 saida <= A and B;
             when "100" => -- Or
