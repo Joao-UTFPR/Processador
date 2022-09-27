@@ -1,8 +1,10 @@
 # auto-generated
 [Libraries]
 work.files = [
+	'processor_project.vhd'
 ]
 [libraries.work]
 files = [
+	'processor_project.vhd'
 ]
 # auto-generated-end
