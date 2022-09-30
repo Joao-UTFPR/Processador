@@ -12,7 +12,7 @@ entity reg16bits is
     );
 end entity;
 
-architecture a_reg16bits of reg16bits is
+architecture a_reg16bits of reg16bits is 
     signal registro: unsigned(15 downto 0);
 begin
     process(clk, reset, wr_en)
