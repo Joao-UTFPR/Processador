@@ -13,11 +13,7 @@ architecture a_ula_tb of ula_tb is
             B        : IN unsigned (15 downto 0);
             ULA_sel  : IN unsigned (2 downto 0);
             ULA_out  : OUT unsigned (15 downto 0);
-<<<<<<< HEAD
-            CarryOut, OverFlow: out std_logic
-=======
             CarryOut, OverFlow : OUT std_logic
->>>>>>> 5ac4bdfb8eba3a8102743b01626640b7e715c292
         );
     end component;
     signal A, B : unsigned(15 downto 0) := (others => '0');
