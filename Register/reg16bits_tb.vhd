@@ -2,10 +2,10 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity reg16bits_tb is
+entity register16bits_tb is
 end;
 
-architecture a_reg16bits_tb of reg16bits_tb is
+architecture a_register16bits_tb of register16bits_tb is
   component reg16bits is
     port (
       clk : in std_logic;
@@ -65,4 +65,4 @@ begin
     wait;
 
   end process;
-end architecture a_reg16bits_tb;
+end architecture a_register16bits_tb;
