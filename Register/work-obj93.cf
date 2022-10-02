@@ -1,0 +1,4 @@
+v 4
+file . "reg16bits.vhd" "cc6a9007a27cf10e00b0bc5956c8082759d458c0" "20220930183208.128":
+  entity register16bits at 1( 0) + 0 on 11;
+  architecture a_register16bits of register16bits at 15( 301) + 0 on 12;

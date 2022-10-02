@@ -3,7 +3,8 @@ Generated/
 incremental_db/
 output_files/
 db/
-
+processor_project.vhdpproj
+*/processor_project.vhdpproj
 ## ModelSim
 Modelsim/
 

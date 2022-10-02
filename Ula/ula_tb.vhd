@@ -13,13 +13,17 @@ architecture a_ula_tb of ula_tb is
             B        : IN unsigned (15 downto 0);
             ULA_sel  : IN unsigned (2 downto 0);
             ULA_out  : OUT unsigned (15 downto 0);
+<<<<<<< HEAD
             CarryOut, OverFlow: out std_logic
+=======
+            CarryOut, OverFlow : OUT std_logic
+>>>>>>> 5ac4bdfb8eba3a8102743b01626640b7e715c292
         );
     end component;
     signal A, B : unsigned(15 downto 0) := (others => '0');
     signal ULA_sel : unsigned(2 downto 0) := (others => '0');
     signal ULA_out : unsigned(15 downto 0);
-    signal CarryOut: std_logic;
+    signal CarryOut, OverFlow: std_logic;
     signal i:integer;
 begin
     uut: ula port map(
@@ -27,6 +31,7 @@ begin
         B => B,
         ULA_sel => ULA_sel,
         ULA_out => ULA_out,
+        OverFlow => OverFlow,
         CarryOut => CarryOut
     );
     
@@ -39,8 +44,25 @@ begin
         
         for i in 0 to 7 loop
             ULA_sel <= ULA_sel + "001";
-            wait for 50 ns;
+            wait for 25 ns;
         end loop;
+        
+        A <= "0111111111111111";
+        B <= "0111111111111111";
+        ULA_sel <= "000";
+        wait for 25 ns;
+        A <= "1011111111111111";
+        B <= "1011111111111111";
+        ULA_sel <= "000";
+        wait for 25 ns;
+        A <= "0111111111111111";
+        B <= "1000000000000000";
+        ULA_sel <= "001";
+        wait for 25 ns;
+        A <= "1000000000000000";
+        B <= "0111111111111111";
+        ULA_sel <= "001";
+        wait for 25 ns;
         wait;
     end process;
 end architecture a_ula_tb;
