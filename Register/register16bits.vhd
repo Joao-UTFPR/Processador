@@ -4,7 +4,7 @@ use ieee.numeric_std.all;
 
 entity register16bits is
     port(
-        clk: in std_logic;
+        clock: in std_logic;
         reset : in std_logic;
         wr_en : in std_logic;
         data_in : in unsigned(15 downto 0);
@@ -15,12 +15,12 @@ end entity;
 architecture a_register16bits of register16bits is
     signal registro: unsigned(15 downto 0);
 begin
-    process(clk, reset, wr_en)
+    process(clock, reset, wr_en)
     begin
         if reset = '1' then
             registro <= x"0000";
         elsif wr_en = '1' then
-            if rising_edge(clk) then
+            if rising_edge(clock) then
                 registro <= data_in;
             end if;
         end if;
