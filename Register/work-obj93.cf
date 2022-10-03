@@ -1,16 +1,16 @@
 v 4
-file . "registerBank_tb.vhd" "a7c7bfa826ee7aa785b8904b771123d997434667" "20221003003005.036":
-  entity registerbank_tb at 1( 0) + 0 on 65;
-  architecture a_registerbank_tb of registerbank_tb at 8( 102) + 0 on 66;
+file . "registerBank_tb.vhd" "c6d3e445a735912fc1e79e948bc66ce9260e494a" "20221003013615.032":
+  entity registerbank_tb at 1( 0) + 0 on 113;
+  architecture a_registerbank_tb of registerbank_tb at 8( 102) + 0 on 114;
 file . "register16bits_tb.vhd" "78c7153074285ff782422409f5a3b0722328bc2e" "20221003002956.379":
   entity register16bits_tb at 1( 0) + 0 on 61;
   architecture a_register16bits_tb of register16bits_tb at 8( 104) + 0 on 62;
-file . "register16bits.vhd" "814cb168f6e54f79eace15006310d7847d846d64" "20221003002952.908":
-  entity register16bits at 1( 0) + 0 on 59;
-  architecture a_register16bits of register16bits at 15( 303) + 0 on 60;
+file . "register16bits.vhd" "24720e5e9cab3ec5d424f758c68d70882bd80e41" "20221003005721.454":
+  entity register16bits at 1( 0) + 0 on 77;
+  architecture a_register16bits of register16bits at 15( 309) + 0 on 78;
 file . "ula.vhd" "e410b6d10da771667f266c8bd7cd5f5a5f2ca761" "20221003001230.693":
   entity ula at 1( 0) + 0 on 37;
   architecture a_ula of ula at 15( 283) + 0 on 38;
-file . "registerBank.vhd" "48308fe078974fd2733fb7ba385e8cac8f5e7eb7" "20221003003002.364":
-  entity registerbank at 1( 0) + 0 on 63;
-  architecture a_registerbank of registerbank at 17( 519) + 0 on 64;
+file . "registerBank.vhd" "4f425ed66b9148f0796588239f984519b7b28840" "20221003005618.832":
+  entity registerbank at 1( 0) + 0 on 73;
+  architecture a_registerbank of registerbank at 17( 519) + 0 on 74;

@@ -18,7 +18,7 @@ architecture a_registerBank of registerBank is
 component register16bits is port(
         clock:        in std_logic;
         reset :     in std_logic;
-        wr_en :     in std_logic;
+        writeEnable :     in std_logic;
         data_in :   in unsigned(15 downto 0);
         data_out :  out unsigned(15 downto 0)
 );
@@ -48,13 +48,13 @@ begin
     we7<=
         writeEnable when selRegWrite="111" else
         '0';
-    r1: register16bits port map (clock=>clock,reset=>reset,wr_en=>we1,data_in=>writeData,data_out=>r1Data);
-    r2: register16bits port map (clock=>clock,reset=>reset,wr_en=>we2,data_in=>writeData,data_out=>r2Data);
-    r3: register16bits port map (clock=>clock,reset=>reset,wr_en=>we3,data_in=>writeData,data_out=>r3Data);
-    r4: register16bits port map (clock=>clock,reset=>reset,wr_en=>we4,data_in=>writeData,data_out=>r4Data); 
-    r5: register16bits port map (clock=>clock,reset=>reset,wr_en=>we5,data_in=>writeData,data_out=>r5Data); 
-    r6: register16bits port map (clock=>clock,reset=>reset,wr_en=>we6,data_in=>writeData,data_out=>r6Data); 
-    r7: register16bits port map (clock=>clock,reset=>reset,wr_en=>we7,data_in=>writeData,data_out=>r7Data);
+    r1: register16bits port map (clock=>clock,reset=>reset,writeEnable=>we1,data_in=>writeData,data_out=>r1Data);
+    r2: register16bits port map (clock=>clock,reset=>reset,writeEnable=>we2,data_in=>writeData,data_out=>r2Data);
+    r3: register16bits port map (clock=>clock,reset=>reset,writeEnable=>we3,data_in=>writeData,data_out=>r3Data);
+    r4: register16bits port map (clock=>clock,reset=>reset,writeEnable=>we4,data_in=>writeData,data_out=>r4Data); 
+    r5: register16bits port map (clock=>clock,reset=>reset,writeEnable=>we5,data_in=>writeData,data_out=>r5Data); 
+    r6: register16bits port map (clock=>clock,reset=>reset,writeEnable=>we6,data_in=>writeData,data_out=>r6Data); 
+    r7: register16bits port map (clock=>clock,reset=>reset,writeEnable=>we7,data_in=>writeData,data_out=>r7Data);
 
     data1<=
             x"0000"     when selRegRead1="000" else

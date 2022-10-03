@@ -17,7 +17,8 @@ architecture a_registerBank_tb of registerBank_tb is
             Reg1Data, Reg2Data:         OUT unsigned(15 downto 0)
         );
     end component;
-    constant period_time:              time := 100 ns;
+
+    constant period_time:              time := 500 ns;
     signal finished:                   std_logic := '0';
     signal clock, reset:               std_logic;
     signal writeData:                  unsigned(15 downto 0);
@@ -25,6 +26,8 @@ architecture a_registerBank_tb of registerBank_tb is
     signal selRegWrite:                unsigned(2 downto 0);
     signal writeEnable:                std_logic;
     signal Reg1Data, Reg2Data:         unsigned(15 downto 0);
+    signal i:integer;
+
 begin
     uut : registerBank port map(
       selRegRead1 => selRegRead1,
@@ -68,14 +71,22 @@ begin
     process
     begin
         wait for 200 ns;
-        writeEnable<='1';
-        writeData <= x"0001";
-        selRegWrite <= "000";
-        for i in 0 to 7 loop
-            selRegWrite <= selRegWrite + "001";
-            writeData <= writeData + x"0001";
-            wait for 25 ns;
-        end loop;
+        writeEnable <= '1';
+        selRegWrite <= "001";
+        writeData <= "0000000000000001";
+        wait for 3000 ns;
+        selRegWrite <= "010";
+        writeData <= "0000000000000101";
+        selRegRead1 <= "001";
+        selRegRead2 <= "010";
+        -- for i in 0 to 7 loop
+        --     selRegWrite <= selRegWrite + "001";
+        --     writeData <= writeData + "0000000000000001";
+        --     wait for 1000 ns;
+        -- end loop;
+        -- wait for 200 ns;
+        -- writeEnable <= '0';
+        -- reset <= '1';
         wait;
     end process;
 
