@@ -30,7 +30,7 @@ begin
   reset_global : process
   begin
     reset <= '1';
-    wait for period_time * 2; -- espera 2 clocks, pra garantir
+    wait for period_time * 50; -- espera 2 clocks, pra garantir
     reset <= '0';
     wait;
   end process;
@@ -56,13 +56,16 @@ begin
   process
   begin
     wait for 200 ns;
-    wr_en <= '0';
+    wr_en <= '1';
     data_in <= "1111111111111111";
     wait for 100 ns;
     data_in <= "0000000010001101";
     wait for 100 ns;
     data_in <= "0000000000000001";
+    wait for 100 ns;
+    data_in <= "0000000000000010";
+    wait for 2000 ns;
+    data_in <= "0000000000000011";
     wait;
-
   end process;
 end architecture a_reg16bits_tb;

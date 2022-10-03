@@ -1,7 +1,7 @@
 v 4
-file . "reg16bits_tb.vhd" "d0d0e2c929d8a82c21c9958f1aceef0ab5bdebd1" "20221002170109.102":
-  entity reg16bits_tb at 1( 0) + 0 on 21;
-  architecture a_reg16bits_tb of reg16bits_tb at 8( 99) + 0 on 22;
-file . "reg16bits.vhd" "aef8da2390da45b38c8424de5f04d1851ece133c" "20221002170105.190":
-  entity reg16bits at 1( 0) + 0 on 19;
-  architecture a_reg16bits of reg16bits at 15( 296) + 0 on 20;
+file . "reg16bits.vhd" "aef8da2390da45b38c8424de5f04d1851ece133c" "20221002232913.011":
+  entity reg16bits at 1( 0) + 0 on 57;
+  architecture a_reg16bits of reg16bits at 15( 296) + 0 on 58;
+file . "reg16bits_tb.vhd" "76663c36674daee37d7fc274c85de5b3313fd4c2" "20221002232913.022":
+  entity reg16bits_tb at 1( 0) + 0 on 59;
+  architecture a_reg16bits_tb of reg16bits_tb at 8( 99) + 0 on 60;
