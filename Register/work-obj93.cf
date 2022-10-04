@@ -1,16 +1,25 @@
 v 4
-file . "registerBank.vhd" "6384840c7422d5de6aeefa9e8b605470ed61082a" "20221003210111.443":
-  entity registerbank at 1( 0) + 0 on 345;
-  architecture a_registerbank of registerbank at 17( 519) + 0 on 346;
-file . "ula.vhd" "e410b6d10da771667f266c8bd7cd5f5a5f2ca761" "20221003001230.693":
-  entity ula at 1( 0) + 0 on 37;
-  architecture a_ula of ula at 15( 283) + 0 on 38;
-file . "register16bits.vhd" "24720e5e9cab3ec5d424f758c68d70882bd80e41" "20221003193513.465":
-  entity register16bits at 1( 0) + 0 on 115;
-  architecture a_register16bits of register16bits at 15( 309) + 0 on 116;
+file . "processador_tb.vhd" "c23dab3e5ccdc2e2082ec2723de274a77f74c20f" "20221004012940.703":
+  entity processador_tb at 1( 0) + 0 on 389;
+  architecture a_processador_tb of processador_tb at 8( 101) + 0 on 390;
+file . "mux2x1.vhd" "e2fdc37eb8c0fafbead37dabb35b907cc54bb1fa" "20221004010611.492":
+  entity mux2x1 at 1( 0) + 0 on 353;
+  architecture a_mux2x1 of mux2x1 at 14( 259) + 0 on 354;
+file . "registerBank_tb.vhd" "747c333862917ff39b6f36547fea90090c4bc13a" "20221003224910.730":
+  entity registerbank_tb at 1( 0) + 0 on 349;
+  architecture a_registerbank_tb of registerbank_tb at 8( 102) + 0 on 350;
 file . "register16bits_tb.vhd" "78c7153074285ff782422409f5a3b0722328bc2e" "20221003002956.379":
   entity register16bits_tb at 1( 0) + 0 on 61;
   architecture a_register16bits_tb of register16bits_tb at 8( 104) + 0 on 62;
-file . "registerBank_tb.vhd" "747c333862917ff39b6f36547fea90090c4bc13a" "20221003210111.459":
-  entity registerbank_tb at 1( 0) + 0 on 347;
-  architecture a_registerbank_tb of registerbank_tb at 8( 102) + 0 on 348;
+file . "register16bits.vhd" "24720e5e9cab3ec5d424f758c68d70882bd80e41" "20221003193513.465":
+  entity register16bits at 1( 0) + 0 on 115;
+  architecture a_register16bits of register16bits at 15( 309) + 0 on 116;
+file . "ula.vhd" "0c85fcf8815fe5102a5a9dd9a22841a2c6ca1778" "20221004011622.955":
+  entity ula at 1( 0) + 0 on 373;
+  architecture a_ula of ula at 15( 273) + 0 on 374;
+file . "registerBank.vhd" "6384840c7422d5de6aeefa9e8b605470ed61082a" "20221004010527.874":
+  entity registerbank at 1( 0) + 0 on 351;
+  architecture a_registerbank of registerbank at 17( 519) + 0 on 352;
+file . "processador.vhd" "090c4175b4c855b09a21b51b34ff1b1d723cfce2" "20221004012801.780":
+  entity processador at 1( 0) + 0 on 385;
+  architecture a_processador of processador at 19( 622) + 0 on 386;

@@ -8,14 +8,14 @@ entity ula is
         A,B : in unsigned(15 downto 0);
         ULA_sel: in unsigned(2 downto 0);
         ULA_out: out unsigned(15 downto 0);
-        CarryOut, OverFlow: out std_logic
+        OverFlow: out std_logic
     );
 end entity;
 
 architecture a_ula of ula is
     signal saida: unsigned(15 downto 0);
     signal ovf: std_logic;
-    signal tmp: unsigned(15  downto 0);
+    -- signal tmp: unsigned(15  downto 0);
     signal res_soma: unsigned(15 downto 0);
     signal res_subt: unsigned(15 downto 0);
 begin
@@ -48,6 +48,6 @@ begin
     
     ULA_out <= saida;
     OverFlow <= ovf;
-    tmp <= ('0' & A) + ('0' & B);
-    CarryOut <= tmp(16);
+    -- tmp <= ('0' & A) + ('0' & B);
+    -- CarryOut <= tmp(16);
 end architecture;
