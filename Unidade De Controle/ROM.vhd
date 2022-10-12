@@ -18,17 +18,17 @@ architecture a_rom of rom is
     constant conteudo_rom : mem := (
     -- caso endereco => conteudo
     0  =>  "000000000010",
-    1  =>  "111100000101",
+    1  =>  "111100000101", --pula para a linha 5
     2  =>  "000000000000",
-    3  =>  "111101111111",
+    3  =>  "111101111111", --pula para a linha 6
     4  =>  "100000000000",
-    5  =>  "000000000010",
-    6  =>  "111100000011",
+    5  =>  "000000000010", 
+    6  =>  "111100000011", --pula para a linha 127
     7  =>  "000000000010",
     8  =>  "000000000010",
     9  =>  "000000000000",
     10 =>  "000000000000",
-    127 => "111110000110",
+    127 => "111110000110", -- pula para a linha 3
     -- abaixo: casos omissos => (zero em todos os bits)
     others => (others=>'0')
  );

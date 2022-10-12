@@ -23,19 +23,16 @@ architecture a_proto_UC of proto_UC is
         end component;
 
     signal estado_s, jump_enable: std_logic;
-    signal opcode: unsigned(3 downto 0);
 begin
     maquina_de_estados: stateMachine port map(clock=>clock,reset=>reset,estado_o=>estado_s);
 
-    opcode<=instruction(11 downto 8);
-
     jump_enable<=
-            '1' when opcode="1111" else
+            '1' when instruction(11 downto 8)="1111" else
             '0';
 
     pc_next <= 
-            instruction(6 downto 0) when jump_enable='1' and  estado_s='1' else
-            pc_prev+"1" when jump_enable='0' and estado_s='1' else
+            instruction(6 downto 0) when jump_enable='1' and estado_s='1' else
+            pc_prev+"1"             when jump_enable='0' and estado_s='1' else
             pc_prev;
     
     memory_read <=
