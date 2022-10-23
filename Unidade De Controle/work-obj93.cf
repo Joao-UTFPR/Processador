@@ -1,22 +1,22 @@
 v 4
-file . "top_level.vhd" "a6bedee4652bd0ab56ab2743db936f6d110a206a" "20221012233000.848":
-  entity top_level at 1( 0) + 0 on 71;
-  architecture a_top_level of top_level at 13( 215) + 0 on 72;
-file . "proto_UC.vhd" "5cc5d059e01ed8063ce424da8d9bb7b096c0158f" "20221012232915.370":
-  entity proto_uc at 1( 0) + 0 on 67;
-  architecture a_proto_uc of proto_uc at 16( 386) + 0 on 68;
-file . "stateMachine_tb.vhd" "98790584e39d44f056810234f023afe781283d95" "20221012210835.402":
-  entity statemachine_tb at 1( 0) + 0 on 17;
-  architecture a_statemachine_tb of statemachine_tb at 8( 102) + 0 on 18;
-file . "stateMachine.vhd" "97af2396dee094ea95c5dd52cf575a460ef81640" "20221012221830.577":
-  entity statemachine at 1( 0) + 0 on 41;
-  architecture a_statemachine of statemachine at 13( 215) + 0 on 42;
-file . "PC.vhd" "e6b5f86d8b72519e4af11703abd1566db98b3800" "20221012214026.384":
-  entity pc at 1( 0) + 0 on 19;
-  architecture a_pc of pc at 15( 295) + 0 on 20;
-file . "ROM.vhd" "dc28820f66edc46ca109e715606d656279ce1955" "20221012233444.509":
-  entity rom at 1( 0) + 0 on 77;
-  architecture a_rom of rom at 16( 239) + 0 on 78;
 file . "top_level_tb.vhd" "f48cf7deb9e7c5083d75aeff196b729ac9db84cd" "20221012232125.268":
   entity top_level_tb at 1( 0) + 0 on 63;
   architecture a_top_level_tb of top_level_tb at 8( 99) + 0 on 64;
+file . "ROM.vhd" "dc28820f66edc46ca109e715606d656279ce1955" "20221012233444.509":
+  entity rom at 1( 0) + 0 on 77;
+  architecture a_rom of rom at 16( 239) + 0 on 78;
+file . "PC.vhd" "e6b5f86d8b72519e4af11703abd1566db98b3800" "20221012214026.384":
+  entity pc at 1( 0) + 0 on 19;
+  architecture a_pc of pc at 15( 295) + 0 on 20;
+file . "stateMachine.vhd" "97af2396dee094ea95c5dd52cf575a460ef81640" "20221012221830.577":
+  entity statemachine at 1( 0) + 0 on 41;
+  architecture a_statemachine of statemachine at 13( 215) + 0 on 42;
+file . "stateMachine_tb.vhd" "98790584e39d44f056810234f023afe781283d95" "20221012210835.402":
+  entity statemachine_tb at 1( 0) + 0 on 17;
+  architecture a_statemachine_tb of statemachine_tb at 8( 102) + 0 on 18;
+file . "proto_UC.vhd" "37892d0c62d2991b09e7c627363ea93367e122b9" "20221021175131.114":
+  entity proto_uc at 1( 0) + 0 on 79;
+  architecture a_proto_uc of proto_uc at 16( 386) + 0 on 80;
+file . "top_level.vhd" "a6bedee4652bd0ab56ab2743db936f6d110a206a" "20221012233000.848":
+  entity top_level at 1( 0) + 0 on 71;
+  architecture a_top_level of top_level at 13( 215) + 0 on 72;
