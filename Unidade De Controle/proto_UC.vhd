@@ -32,7 +32,7 @@ begin
 
     pc_next <= 
             instruction(6 downto 0) when jump_enable='1' and estado_s='1' else
-            pc_prev+1             when jump_enable='0' and estado_s='1' else
+            pc_prev+1               when jump_enable='0' and estado_s='1' else
             pc_prev;
     
     memory_read <=
