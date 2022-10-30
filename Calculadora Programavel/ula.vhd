@@ -48,6 +48,6 @@ begin
     
     ULA_out <= saida;
     OverFlow <= ovf;
-    tmp <= ('0' & A) + ('0' & B);
-    CarryOut <= tmp(16);
+    -- tmp <= ('0' & A) + ('0' & B);
+    CarryOut <= '0';
 end architecture;

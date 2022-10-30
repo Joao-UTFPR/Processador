@@ -29,6 +29,7 @@ architecture a_UC of UC is
     signal fetch, decode, execute, jump_enable: std_logic;
     signal instruction_s: unsigned(15 downto 0);
     signal estado_s: unsigned(1 downto 0);
+    signal RFormatUlaOperation: unsigned(2 downto 0);
 begin
     maquina_de_estados: stateMachine port map(clock=>clock,reset=>reset,estado_o=>estado_s); 
 
@@ -47,13 +48,13 @@ begin
             instruction_s;
 
     jump_enable<=
-            '1' when instruction_s(15 downto 12)="1111" and decode='1' else
+            '1' when instruction_s(15 downto 12)="1111" and execute='1' else
             '0' when decode='1' else
             jump_enable;
 
     pcNext <= 
-            instruction(6 downto 0)     when jump_enable='1' and execute='1' else
-            pcPrevious+1                when jump_enable='0' and execute='1' else
+            instruction(10 downto 4)     when jump_enable='1' and execute='1' else
+            pcPrevious+1                 when jump_enable='0' and execute='1' else
             pcPrevious;
     
     memoryReadEnable <=
@@ -63,23 +64,29 @@ begin
     instructionRegisterWriteEnable<=
             '1' when fetch='0' else
             '0';
+
+    RFormatUlaOperation <=
+        "000" when instruction_s(15 downto 12)="0001" else
+        "001" when instruction_s(15 downto 12)="0010" else
+        "010" when instruction_s(15 downto 12)="0011" else
+        "011" when instruction_s(15 downto 12)="0100" else
+        "100" when instruction_s(15 downto 12)="0101" else
+        "101" when instruction_s(15 downto 12)="0110" else
+        "110" when instruction_s(15 downto 12)="0111" else
+        "111" when instruction_s(15 downto 12)="1000" else
+        "000";
+
     ulaSel <=
-        "000" when instruction_s(15 downto 12) ="0001" else
-        "001" when instruction_s(15 downto 12) ="0010" else
-        "010" when instruction_s(15 downto 12) ="0011" else
-        "011" when instruction_s(15 downto 12) ="0100" else
-        "100" when instruction_s(15 downto 12) ="0101" else
-        "101" when instruction_s(15 downto 12) ="0110" else
-        "110" when instruction_s(15 downto 12) ="0111" else
-        "111" when instruction_s(15 downto 12) ="1000" else
-        "uuu";
+        "000" when instruction_s(15 downto 12)="0000" and instruction_s(3 downto 3)="0" else
+        "001" when instruction_s(15 downto 12)="0000" and instruction_s(3 downto 3)="1" else
+        RFormatUlaOperation;
 
      muxUlaBSel <=
         '0' when instruction_s(15 downto 12) ="0000" else
         '1';
         
      registerBankWriteEnable <=
-        '1' when execute='1' else
+        '1' when execute='1' and instruction_s(15 downto 12)/="1111"else
         '0';
 
 end architecture;

@@ -6,7 +6,7 @@ use ieee.numeric_std.all;
 entity mux2x1 is
     port(
         sel            : in std_logic;
-        in0, in1       : in unsigned(15 downto 0);
+        in0, in1       : in unsigned;
         saida          : out unsigned(15 downto 0)
     );
 end entity;
@@ -14,8 +14,8 @@ end entity;
 architecture a_mux2x1 of mux2x1 is
     begin
         saida <=
-                in0 when sel='0' else
-                in1 when sel='1' else
+                resize(in0,16) when sel='0' else
+                resize(in1,16) when sel='1' else
                 x"0000";
         
     end architecture;

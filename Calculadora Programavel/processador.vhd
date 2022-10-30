@@ -25,7 +25,7 @@ architecture a_processador of processador is
         port(
             clock:                          IN std_logic;
             reset:                          IN std_logic;
-            instruction:                    IN unsigned(11 downto 0);
+            instruction:                    IN unsigned(15 downto 0);
             pcPrevious:                     IN unsigned(6 downto 0);
             pcNext:                         OUT unsigned(6 downto 0);
             memoryReadEnable:               OUT std_logic;
@@ -78,7 +78,7 @@ architecture a_processador of processador is
 
     component mux2x1 port(
         sel            : in std_logic;
-        in0, in1       : in unsigned(15 downto 0);
+        in0, in1       : in unsigned;
         saida          : out unsigned(15 downto 0)
     );
     end component;
@@ -89,7 +89,7 @@ architecture a_processador of processador is
     signal ulaSel_s: unsigned(2 downto 0);
     signal ulaOut_s: unsigned(15 downto 0);
     signal carryOut_s, overFlow_s, muxUlaBSel_s: std_logic;
-    signal reg1Data_s, reg2Data_2, muxUlaBOut_S: unsigned(15 downto 0);
+    signal reg1Data_s, reg2Data_s, muxUlaBOut_S: unsigned(15 downto 0);
 
 
 begin
@@ -109,6 +109,7 @@ begin
         instruction             =>instruction_s,
         ulaSel                  =>ulaSel_s,
         muxUlaBSel              =>muxUlaBSel_s,
+        instructionRegisterWriteEnable=> instructionRegisterWriteEnable_s,
         registerBankWriteEnable =>registerBankWriteEnable_s
         );
 
@@ -117,8 +118,7 @@ begin
         clock                           =>clock,
         writeEnable                     =>'1',
         data_in                         =>pc_in_s,
-        data_out                        =>pc_out_s,
-        instructionRegisterWriteEnable  =>instructionRegisterWriteEnable_s
+        data_out                        =>pc_out_s
         );
     
     instruction_register:instructionRegister port map(
@@ -143,7 +143,7 @@ begin
     
     mux_ula_b: mux2x1 port map(
         sel=>muxUlaBSel_s,
-        in0=>B"0000_0000" & instruction_s(8 downto 3),
+        in0=>instruction_s(8 downto 4),
         in1=>reg2Data_s,
         saida=>muxUlaBOut_S
     );
@@ -157,5 +157,5 @@ begin
         OverFlow=>overFlow_s
     );
     
-    data <= data_s;
+    -- data <= data_s;
 end architecture;
