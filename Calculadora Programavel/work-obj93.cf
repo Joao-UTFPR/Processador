@@ -1,34 +1,34 @@
 v 4
-file . "processador_tb.vhd" "b6ee83c0ef5b29f9ba16e2344ca18c71cd2b93bd" "20221030012133.164":
-  entity processador_tb at 1( 0) + 0 on 543;
-  architecture a_processador_tb of processador_tb at 8( 101) + 0 on 544;
-file . "UC.vhd" "a8b5d44f44227bc4cfc4f22af62ae733a7cd394c" "20221030012133.152":
-  entity uc at 1( 0) + 0 on 537;
-  architecture a_uc of uc at 20( 707) + 0 on 538;
-file . "ROM.vhd" "f762c919a7d692e157e19cd06ce06d035db8e12b" "20221030012133.143":
-  entity rom at 1( 0) + 0 on 533;
-  architecture a_rom of rom at 16( 252) + 0 on 534;
-file . "register16bits.vhd" "24720e5e9cab3ec5d424f758c68d70882bd80e41" "20221030012133.132":
-  entity register16bits at 1( 0) + 0 on 529;
-  architecture a_register16bits of register16bits at 15( 309) + 0 on 530;
-file . "PC.vhd" "e6b5f86d8b72519e4af11703abd1566db98b3800" "20221030012133.118":
-  entity pc at 1( 0) + 0 on 527;
-  architecture a_pc of pc at 15( 295) + 0 on 528;
-file . "instructionRegister.vhd" "9698e521020aa773dcd9caf9897555756483bd4e" "20221030012133.102":
-  entity instructionregister at 1( 0) + 0 on 523;
-  architecture a_instructionregister of instructionregister at 15( 328) + 0 on 524;
-file . "mux2x1.vhd" "38c5c0281a888283ffe90d424fcdc83961bef21e" "20221030012133.110":
-  entity mux2x1 at 1( 0) + 0 on 525;
-  architecture a_mux2x1 of mux2x1 at 14( 246) + 0 on 526;
-file . "processador.vhd" "2c017107560907b60a1e5a15b5e7a7e2220940d3" "20221030012133.160":
-  entity processador at 1( 0) + 0 on 541;
-  architecture a_processador of processador at 13( 217) + 0 on 542;
-file . "registerBank.vhd" "f28977a5702c62311ce781cdaa7f35723b16b8a6" "20221030012133.138":
-  entity registerbank at 1( 0) + 0 on 531;
-  architecture a_registerbank of registerbank at 17( 519) + 0 on 532;
-file . "stateMachine.vhd" "446c55574b7202de88bf8716d3beda8132756ffd" "20221030012133.148":
-  entity statemachine at 1( 0) + 0 on 535;
-  architecture a_statemachine of statemachine at 13( 226) + 0 on 536;
-file . "ula.vhd" "3c1c30680b8d5b398067bee438dcbb2195a114d3" "20221030012133.156":
-  entity ula at 1( 0) + 0 on 539;
-  architecture a_ula of ula at 15( 283) + 0 on 540;
+file . "processador_tb.vhd" "b6ee83c0ef5b29f9ba16e2344ca18c71cd2b93bd" "20221031180415.441":
+  entity processador_tb at 1( 0) + 0 on 587;
+  architecture a_processador_tb of processador_tb at 8( 101) + 0 on 588;
+file . "UC.vhd" "8cad7575d11c2d92689af170791b2c0d9de86efd" "20221031180415.428":
+  entity uc at 1( 0) + 0 on 581;
+  architecture a_uc of uc at 20( 707) + 0 on 582;
+file . "ROM.vhd" "f762c919a7d692e157e19cd06ce06d035db8e12b" "20221031180415.419":
+  entity rom at 1( 0) + 0 on 577;
+  architecture a_rom of rom at 16( 252) + 0 on 578;
+file . "register16bits.vhd" "24720e5e9cab3ec5d424f758c68d70882bd80e41" "20221031180415.410":
+  entity register16bits at 1( 0) + 0 on 573;
+  architecture a_register16bits of register16bits at 15( 309) + 0 on 574;
+file . "PC.vhd" "e6b5f86d8b72519e4af11703abd1566db98b3800" "20221031180415.405":
+  entity pc at 1( 0) + 0 on 571;
+  architecture a_pc of pc at 15( 295) + 0 on 572;
+file . "instructionRegister.vhd" "9698e521020aa773dcd9caf9897555756483bd4e" "20221031180415.396":
+  entity instructionregister at 1( 0) + 0 on 567;
+  architecture a_instructionregister of instructionregister at 15( 328) + 0 on 568;
+file . "mux2x1.vhd" "38c5c0281a888283ffe90d424fcdc83961bef21e" "20221031180415.401":
+  entity mux2x1 at 1( 0) + 0 on 569;
+  architecture a_mux2x1 of mux2x1 at 14( 246) + 0 on 570;
+file . "processador.vhd" "2c017107560907b60a1e5a15b5e7a7e2220940d3" "20221031180415.437":
+  entity processador at 1( 0) + 0 on 585;
+  architecture a_processador of processador at 13( 217) + 0 on 586;
+file . "registerBank.vhd" "f28977a5702c62311ce781cdaa7f35723b16b8a6" "20221031180415.415":
+  entity registerbank at 1( 0) + 0 on 575;
+  architecture a_registerbank of registerbank at 17( 519) + 0 on 576;
+file . "stateMachine.vhd" "446c55574b7202de88bf8716d3beda8132756ffd" "20221031180415.423":
+  entity statemachine at 1( 0) + 0 on 579;
+  architecture a_statemachine of statemachine at 13( 226) + 0 on 580;
+file . "ula.vhd" "3c1c30680b8d5b398067bee438dcbb2195a114d3" "20221031180415.432":
+  entity ula at 1( 0) + 0 on 583;
+  architecture a_ula of ula at 15( 283) + 0 on 584;

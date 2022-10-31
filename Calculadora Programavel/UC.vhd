@@ -65,9 +65,20 @@ begin
             '1' when fetch='0' else
             '0';
 
+--     RFormatUlaOperation <=
+--         "000" when instruction_s(15 downto 12)="0001" else
+--         "001" when instruction_s(15 downto 12)="0010" else
+--         "010" when instruction_s(15 downto 12)="0011" else
+--         "011" when instruction_s(15 downto 12)="0100" else
+--         "100" when instruction_s(15 downto 12)="0101" else
+--         "101" when instruction_s(15 downto 12)="0110" else
+--         "110" when instruction_s(15 downto 12)="0111" else
+--         "111" when instruction_s(15 downto 12)="1000" else
+--         "000";
+
     RFormatUlaOperation <=
-        "000" when instruction_s(15 downto 12)="0001" else
-        "001" when instruction_s(15 downto 12)="0010" else
+        "000" when instruction_s(15 downto 12)="1101" else
+        "001" when instruction_s(15 downto 12)="1001" else
         "010" when instruction_s(15 downto 12)="0011" else
         "011" when instruction_s(15 downto 12)="0100" else
         "100" when instruction_s(15 downto 12)="0101" else
