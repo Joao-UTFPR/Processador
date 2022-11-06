@@ -1,0 +1,37 @@
+v 4
+file . "ula.vhd" "3c1c30680b8d5b398067bee438dcbb2195a114d3" "20221106222909.200":
+  entity ula at 1( 0) + 0 on 993;
+  architecture a_ula of ula at 15( 283) + 0 on 994;
+file . "stateMachine.vhd" "446c55574b7202de88bf8716d3beda8132756ffd" "20221106222909.191":
+  entity statemachine at 1( 0) + 0 on 989;
+  architecture a_statemachine of statemachine at 13( 226) + 0 on 990;
+file . "registerBank.vhd" "f28977a5702c62311ce781cdaa7f35723b16b8a6" "20221106222909.183":
+  entity registerbank at 1( 0) + 0 on 985;
+  architecture a_registerbank of registerbank at 17( 519) + 0 on 986;
+file . "processador.vhd" "639a87ed9e02b702d2a3e5fb6d37c6f7613ee865" "20221106222909.203":
+  entity processador at 1( 0) + 0 on 995;
+  architecture a_processador of processador at 13( 217) + 0 on 996;
+file . "mux2x1.vhd" "38c5c0281a888283ffe90d424fcdc83961bef21e" "20221106222909.170":
+  entity mux2x1 at 1( 0) + 0 on 979;
+  architecture a_mux2x1 of mux2x1 at 14( 246) + 0 on 980;
+file . "instructionRegister.vhd" "9698e521020aa773dcd9caf9897555756483bd4e" "20221106222909.165":
+  entity instructionregister at 1( 0) + 0 on 977;
+  architecture a_instructionregister of instructionregister at 15( 328) + 0 on 978;
+file . "PC.vhd" "e6b5f86d8b72519e4af11703abd1566db98b3800" "20221106222909.175":
+  entity pc at 1( 0) + 0 on 981;
+  architecture a_pc of pc at 15( 295) + 0 on 982;
+file . "register16bits.vhd" "24720e5e9cab3ec5d424f758c68d70882bd80e41" "20221106222909.179":
+  entity register16bits at 1( 0) + 0 on 983;
+  architecture a_register16bits of register16bits at 15( 309) + 0 on 984;
+file . "ROM.vhd" "bc12f93f518ccab072201970f9b83be1774047e0" "20221106222909.187":
+  entity rom at 1( 0) + 0 on 987;
+  architecture a_rom of rom at 16( 252) + 0 on 988;
+file . "UC.vhd" "11fd5fa5f8c99c4c076cdce4c7d0cc762a821c0d" "20221106222909.196":
+  entity uc at 1( 0) + 0 on 991;
+  architecture a_uc of uc at 21( 761) + 0 on 992;
+file . "processador_tb.vhd" "1c8ac1f70e93442f9b06db8f8cfeb2bd2ba854a8" "20221106222909.207":
+  entity processador_tb at 1( 0) + 0 on 997;
+  architecture a_processador_tb of processador_tb at 8( 101) + 0 on 998;
+file . "branchFlag.vhd" "2ff8f92da83177bd62a62975e96f8cc8510b7517" "20221106222909.154":
+  entity branchflag at 1( 0) + 0 on 975;
+  architecture a_branchflag of branchflag at 15( 293) + 0 on 976;
