@@ -1,37 +1,40 @@
 v 4
-file . "ula.vhd" "3c1c30680b8d5b398067bee438dcbb2195a114d3" "20221106222909.200":
-  entity ula at 1( 0) + 0 on 993;
-  architecture a_ula of ula at 15( 283) + 0 on 994;
-file . "stateMachine.vhd" "446c55574b7202de88bf8716d3beda8132756ffd" "20221106222909.191":
-  entity statemachine at 1( 0) + 0 on 989;
-  architecture a_statemachine of statemachine at 13( 226) + 0 on 990;
-file . "registerBank.vhd" "f28977a5702c62311ce781cdaa7f35723b16b8a6" "20221106222909.183":
-  entity registerbank at 1( 0) + 0 on 985;
-  architecture a_registerbank of registerbank at 17( 519) + 0 on 986;
-file . "processador.vhd" "639a87ed9e02b702d2a3e5fb6d37c6f7613ee865" "20221106222909.203":
-  entity processador at 1( 0) + 0 on 995;
-  architecture a_processador of processador at 13( 217) + 0 on 996;
-file . "mux2x1.vhd" "38c5c0281a888283ffe90d424fcdc83961bef21e" "20221106222909.170":
-  entity mux2x1 at 1( 0) + 0 on 979;
-  architecture a_mux2x1 of mux2x1 at 14( 246) + 0 on 980;
-file . "instructionRegister.vhd" "9698e521020aa773dcd9caf9897555756483bd4e" "20221106222909.165":
-  entity instructionregister at 1( 0) + 0 on 977;
-  architecture a_instructionregister of instructionregister at 15( 328) + 0 on 978;
-file . "PC.vhd" "e6b5f86d8b72519e4af11703abd1566db98b3800" "20221106222909.175":
-  entity pc at 1( 0) + 0 on 981;
-  architecture a_pc of pc at 15( 295) + 0 on 982;
-file . "register16bits.vhd" "24720e5e9cab3ec5d424f758c68d70882bd80e41" "20221106222909.179":
-  entity register16bits at 1( 0) + 0 on 983;
-  architecture a_register16bits of register16bits at 15( 309) + 0 on 984;
-file . "ROM.vhd" "bc12f93f518ccab072201970f9b83be1774047e0" "20221106222909.187":
-  entity rom at 1( 0) + 0 on 987;
-  architecture a_rom of rom at 16( 252) + 0 on 988;
-file . "UC.vhd" "11fd5fa5f8c99c4c076cdce4c7d0cc762a821c0d" "20221106222909.196":
-  entity uc at 1( 0) + 0 on 991;
-  architecture a_uc of uc at 21( 761) + 0 on 992;
-file . "processador_tb.vhd" "1c8ac1f70e93442f9b06db8f8cfeb2bd2ba854a8" "20221106222909.207":
-  entity processador_tb at 1( 0) + 0 on 997;
-  architecture a_processador_tb of processador_tb at 8( 101) + 0 on 998;
-file . "branchFlag.vhd" "2ff8f92da83177bd62a62975e96f8cc8510b7517" "20221106222909.154":
-  entity branchflag at 1( 0) + 0 on 975;
-  architecture a_branchflag of branchflag at 15( 293) + 0 on 976;
+file . "mux2x1_std_logic.vhd" "2b1c47675d0d679184399df5795dd80848dc2947" "20221116144730.995":
+  entity mux2x1_std_logic at 1( 0) + 0 on 1527;
+  architecture mux2x1_std_logic of mux2x1_std_logic at 14( 245) + 0 on 1528;
+file . "ula.vhd" "4577524ff1f5aca1060478595474f13fdecfa22e" "20221116144731.025":
+  entity ula at 1( 0) + 0 on 1541;
+  architecture a_ula of ula at 15( 283) + 0 on 1542;
+file . "stateMachine.vhd" "446c55574b7202de88bf8716d3beda8132756ffd" "20221116144731.016":
+  entity statemachine at 1( 0) + 0 on 1537;
+  architecture a_statemachine of statemachine at 13( 226) + 0 on 1538;
+file . "registerBank.vhd" "f28977a5702c62311ce781cdaa7f35723b16b8a6" "20221116144731.007":
+  entity registerbank at 1( 0) + 0 on 1533;
+  architecture a_registerbank of registerbank at 17( 519) + 0 on 1534;
+file . "processador.vhd" "bed375033389ec49f356a416d44e32cd8b4f81eb" "20221116144731.030":
+  entity processador at 1( 0) + 0 on 1543;
+  architecture a_processador of processador at 20( 572) + 0 on 1544;
+file . "mux2x1.vhd" "38c5c0281a888283ffe90d424fcdc83961bef21e" "20221116144730.991":
+  entity mux2x1 at 1( 0) + 0 on 1525;
+  architecture a_mux2x1 of mux2x1 at 14( 246) + 0 on 1526;
+file . "instructionRegister.vhd" "9698e521020aa773dcd9caf9897555756483bd4e" "20221116144730.986":
+  entity instructionregister at 1( 0) + 0 on 1523;
+  architecture a_instructionregister of instructionregister at 15( 328) + 0 on 1524;
+file . "PC.vhd" "e6b5f86d8b72519e4af11703abd1566db98b3800" "20221116144730.999":
+  entity pc at 1( 0) + 0 on 1529;
+  architecture a_pc of pc at 15( 295) + 0 on 1530;
+file . "register16bits.vhd" "24720e5e9cab3ec5d424f758c68d70882bd80e41" "20221116144731.003":
+  entity register16bits at 1( 0) + 0 on 1531;
+  architecture a_register16bits of register16bits at 15( 309) + 0 on 1532;
+file . "ROM.vhd" "6d9525c952edf77ff4e4088a39891c51f4e3057e" "20221116144731.012":
+  entity rom at 1( 0) + 0 on 1535;
+  architecture a_rom of rom at 16( 252) + 0 on 1536;
+file . "UC.vhd" "ccc49306356e6365b0564dea78e51e02fe334157" "20221116144731.020":
+  entity uc at 1( 0) + 0 on 1539;
+  architecture a_uc of uc at 23( 882) + 0 on 1540;
+file . "processador_tb.vhd" "3f99933129a97f5f25fe853616c35dce1239a102" "20221116144731.035":
+  entity processador_tb at 1( 0) + 0 on 1545;
+  architecture a_processador_tb of processador_tb at 8( 101) + 0 on 1546;
+file . "branchFlag.vhd" "f4463ef2319a1e538a5cc19c849bb29c872e9842" "20221116144730.977":
+  entity branchflag at 1( 0) + 0 on 1521;
+  architecture a_branchflag of branchflag at 15( 281) + 0 on 1522;

@@ -22,7 +22,8 @@ architecture a_rom of rom is
     2  =>  B"1101_011_100_000_100", --ADD D3,D4,D4
     3  =>  B"0000_011_00001_0_011", --ADDI D3,1,D3
     4  =>  B"0000_000_11110_0_001", --ADDI D0,30,D1
-    5  =>  B"0110_001_011_1_10011", --BCC GT,D1,D3,-3
+    5  =>  B"0110_001_011_1_11101", --BCC GT,D1,D3,-3
+    6  =>  B"0000_000_00111_1010",
     -- abaixo: casos omissos => (zero em todos os bits)
     others => (others=>'0')
  );

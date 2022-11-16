@@ -14,7 +14,9 @@ entity UC is
         instructionRegisterWriteEnable: OUT std_logic;
         ulaSel:                         OUT unsigned(2 downto 0);
         muxUlaBSel:                     OUT std_logic;
-        registerBankWriteEnable:        OUT std_logic
+        registerBankWriteEnable:        OUT std_logic;
+        estado:                         OUT unsigned(1 downto 0);
+        BranchTypeSel:                  OUT std_logic
         );
 end entity;
 
@@ -36,6 +38,7 @@ begin
     maquina_de_estados: stateMachine port map(clock=>clock,reset=>reset,estado_o=>estado_s); 
 
 --     relativeDisplace <= signed(instruction_s(4 downto 0));
+    estado<=estado_s;
 
     fetch<=
             '1' when estado_s="00" else
@@ -58,14 +61,16 @@ begin
 
     branch_enable<=
             '1' when instruction_s(15 downto 12)="0110" and branchFlag='1' and execute='1' else
-            '0'; 
+            '0';
 
-    pcNext <= 
-            instruction_s(10 downto 4)                                       when jump_enable='1'    and execute='1' else
-            pcPrevious+instruction_s(3 downto 0)                             when instruction_s(4 downto 4)="0" and branch_enable='1'  and execute='1' else
-            pcPrevious-instruction_s(3 downto 0)                             when instruction_s(4 downto 4)="1" and branch_enable='1'  and execute='1' else
-            pcPrevious+1                                                     when jump_enable='0'    and branch_enable='0' and execute='1' else
-            pcPrevious;
+        pcNext <= 
+        instruction_s(10 downto 4) when jump_enable='1' else
+        pcPrevious+unsigned(
+                resize(
+                signed(
+                instruction_s(4 downto 0)
+                ),7)) when branch_enable='1' else
+        pcPrevious+1;
     
     memoryReadEnable <=
             '1' when fetch='0' else
@@ -87,18 +92,18 @@ begin
         "111" when instruction_s(15 downto 12)="1000" else
         "000";
 
-    ulaExecSel <=
+        ulaSel <=
         "000" when instruction_s(15 downto 12)="0000" and instruction_s(3 downto 3)="0" else
         "001" when instruction_s(15 downto 12)="0000" and instruction_s(3 downto 3)="1" else
         RFormatUlaOperation;
      
-     ulaBranchSel<=
-        "111" when instruction_s(5 downto 5)="0" else
-        "110";
+     BranchTypeSel<=
+        '0' when instruction_s(5 downto 5)="0" else
+        '1';
      
-     ulaSel <=
-        ulaExecSel when execute='1' else
-        ulaBranchSel;
+--      ulaSel <=
+--         ulaExecSel when execute='1' else
+--         ulaBranchSel;
 
      muxUlaBSel <=
         '0' when instruction_s(15 downto 12) ="0000" else

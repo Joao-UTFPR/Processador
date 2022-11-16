@@ -1,6 +1,7 @@
 ghdl -a branchFlag.vhd
 ghdl -a instructionRegister.vhd
 ghdl -a mux2x1.vhd
+ghdl -a mux2x1_std_logic.vhd
 ghdl -a PC.vhd
 ghdl -a register16bits.vhd
 ghdl -a registerBank.vhd

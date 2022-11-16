@@ -8,7 +8,7 @@ entity ula is
         A,B : in unsigned(15 downto 0);
         ULA_sel: in unsigned(2 downto 0);
         ULA_out: out unsigned(15 downto 0);
-        CarryOut, OverFlow: out std_logic
+        carrySubtr, eqSign: out std_logic
     );
 end entity;
 
@@ -47,7 +47,9 @@ begin
             "0000000000000000";
     
     ULA_out <= saida;
-    OverFlow <= ovf;
-    -- tmp <= ('0' & A) + ('0' & B);
-    CarryOut <= '0';
+    -- OverFlow <= ovf;
+    carrySubtr <= '0' when B<=A else
+        '1';
+    eqSign  <=  '0' when A=B else
+        '1';
 end architecture;
